@@ -1,0 +1,47 @@
+model_list:
+  # ── OpenAI Models ──
+  - model_name: gpt-4o
+    litellm_params:
+      model: openai/gpt-4o
+      api_key: os.environ/OPENAI_API_KEY
+
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: openai/gpt-4o-mini
+      api_key: os.environ/OPENAI_API_KEY
+
+  # ── Anthropic Models ──
+  - model_name: claude-sonnet-4
+    litellm_params:
+      model: anthropic/claude-sonnet-4-20250514
+      api_key: os.environ/ANTHROPIC_API_KEY
+
+  - model_name: claude-haiku-4
+    litellm_params:
+      model: anthropic/claude-haiku-4-5-20251001
+      api_key: os.environ/ANTHROPIC_API_KEY
+
+  - model_name: claude-opus-4
+    litellm_params:
+      model: anthropic/claude-opus-4-20250514
+      api_key: os.environ/ANTHROPIC_API_KEY
+
+litellm_settings:
+  # Forward all traces to Langfuse for observability
+  callbacks: ["langfuse"]
+
+  # Prevent developers from disabling callbacks via request headers
+  allow_dynamic_callback_disabling: false
+
+  # Drop internal params before forwarding to providers
+  drop_params: true
+
+  # Request tagging — pass these headers as metadata for tracing
+  request_headers_to_passthrough:
+    - X-Team-ID
+    - X-App-ID
+    - X-Trace-ID
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+  database_url: os.environ/DATABASE_URL
