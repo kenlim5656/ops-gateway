@@ -60,7 +60,7 @@ export default function RootLayout({
               ))}
             </div>
             <a
-              href="https://github.com/kelim19/ops-gateway"
+              href="https://github.com/kenlim5656/ops-gateway"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-md px-3 py-2 text-sm text-muted hover:text-foreground transition-colors"

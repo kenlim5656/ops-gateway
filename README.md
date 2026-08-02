@@ -88,7 +88,7 @@ graph TB
 ### 1. Clone & Configure
 
 ```bash
-git clone https://github.com/kelim19/ops-gateway
+git clone https://github.com/kenlim5656/ops-gateway
 cd ops-gateway
 cp .env.example .env
 ```

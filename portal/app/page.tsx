@@ -169,7 +169,7 @@ export default function Home() {
           <pre className="mx-auto max-w-lg text-left text-sm rounded-xl border border-border bg-card p-6 font-mono">
             <code>
               <span className="text-muted"># Clone & configure</span>
-              {"\n"}git clone https://github.com/kelim19/ops-gateway{"\n"}
+              {"\n"}git clone https://github.com/kenlim5656/ops-gateway{"\n"}
               cd ops-gateway{"\n"}cp .env.example .env{"\n\n"}
               <span className="text-muted"># Launch everything</span>
               {"\n"}docker compose up -d

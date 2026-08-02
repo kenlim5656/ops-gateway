@@ -43,7 +43,7 @@ export default function QuickStartPage() {
             <h3 className="font-semibold">Clone & Configure</h3>
           </div>
           <pre className="text-sm mb-3">
-            <code>{`git clone https://github.com/kelim19/ops-gateway
+            <code>{`git clone https://github.com/kenlim5656/ops-gateway
 cd ops-gateway
 cp .env.example .env`}</code>
           </pre>
